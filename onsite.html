@@ -1,0 +1,692 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crunchyroll</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+
+        }
+        .navbar{
+           background-color: rgb(0, 0, 0);
+        }
+        .navbar ul{
+            display: flex;
+            flex-direction: row;
+        }
+        .navbar ul li{
+            
+            padding: 20px;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            filter: brightness(80%);
+            margin: 23px 34px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            opacity: 0.8;
+  
+        }
+        .navbar ul li a:hover{
+            color: rgb(255, 255, 255);
+            transition: all 0.7s;
+        }
+        .search{
+            margin: 19px 390px 0px 30px;
+            width: 100px;
+            position: relative;
+            left: 230px;
+        }
+        
+        input[type= 'text']:hover{
+            background-color: rgb(255, 255, 255);
+            transition: all 2s;
+        }
+
+        li .search{
+            margin: 80px 80px 0px 290px;
+            
+        }
+        input[type= 'text']{
+            border: none;
+            padding: 5px;
+            border-radius: 30px;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            font-weight: 300;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .home{
+            height: 545px;
+            width: 1515px;
+            border: 2px solid black;
+            background-image: url('https://pbs.twimg.com/media/EIFM0VFU0AAypb4?format=jpg&name=4096x4096');
+            filter: brightness(100%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .homeheading{
+            margin-top: 77px;
+            margin-left: 25px;
+            width: 500px;
+        }
+        .homepara{
+            margin-top: 29px;
+            margin-bottom: 10px;
+            margin-left: 17px ;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 550px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        .homeheading{
+            color:rgb(255, 255, 255);
+            font-size: 26px;
+        }
+        .but{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          
+            width: 650px;
+        }
+        .but button{
+            float: left;
+            margin: 13px 0px 0px;
+            padding: 11px;
+            border-radius: 20px;
+            color:rgb(243, 168, 29) ;
+            background-color: rgb(255, 255, 255);
+            border: none;
+            width: 100px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+            font-size: 14px;
+            transition: all 1.3s;
+        }
+        .but1{
+            margin: 0px 0px 0px;
+        }
+        .but2{
+            margin: 0px 88px;
+        }
+        .but button:hover{
+            cursor: pointer;
+            color:rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+            opacity: 0.8;
+            transform:scale(1.1);
+        }
+        .now{
+            background-image: url('https://pbs.twimg.com/ext_tw_video_thumb/1698369823992844288/pu/img/lVQiMx8Sey7v0rLD.jpg:large');
+            filter: brightness(100%);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .nowheading{
+            margin-top: 0px;
+            margin-left:0px;
+            padding: 15px;
+            font-size: 0.98rem;
+            color:    rgb(250, 250, 250)  ;
+            
+            text-align: left;
+            
+        }
+        .film{
+            display: flex;
+            flex-direction: row;
+            height: 400px;
+            margin: 10px;
+        }
+        .film1{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://i1.sndcdn.com/artworks-0vSMGG1Pk8JCnayp-WkkN3Q-t500x500.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 1s;
+        }
+        
+        
+        
+        .film2{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://www.cwfilms.jp/en/news/images/12809e7f10e8ec3c6691c5c0c1be7cc50fe00ba6.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 1s;
+        }
+        .film3{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://m.media-amazon.com/images/I/71uVdZEjHIL.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transition: all 1s;
+        }
+        .film4{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://thecomicbookstore.in/wp-content/uploads/2022/11/TCBS3174.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 1s;
+        }
+        .film1:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px #ffffff;
+        }
+        .film2:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px #ffffff;
+        }
+        .film3:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px #ffffff;
+        }
+        .film4:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px #ffffff;
+        }
+        .filmnames{
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .filmnames ul{
+            display: flex;
+            flex-direction: row;
+            width: 2000px;
+        }
+        .filmnames ul li{
+            list-style: none;
+            margin-top: 0px;
+        }
+        .filmnames ul li a{
+            text-decoration: none;
+            margin: 0px 104px 0px 74px;
+            font-weight: 300;
+            font-size: 1.25rem;
+            color: rgb(255, 255, 255);
+        }
+        .filmnames li:nth-child(1){
+            position: relative;
+            left: 10px;
+            bottom: 12px;
+        }
+        .filmnames li:nth-child(2){
+            position: relative;
+            left: 40px;
+            bottom: 12px;
+        }
+        .filmnames li:nth-child(3){
+            position: relative;
+            left: 88px;
+            bottom: 12px;
+        }
+        .filmnames li:nth-child(4){
+            position: relative;
+            left: 130px;
+            bottom: 12px;
+        }
+        .upcoming{
+            margin: 0px;
+            margin-bottom: 0px;
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://pbs.twimg.com/ext_tw_video_thumb/1698369823992844288/pu/img/lVQiMx8Sey7v0rLD.jpg:large');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            filter: brightness(90%);
+        }
+        .upheading{
+            margin-top: 0px;
+            margin-left: 30px;
+            padding: 15px;
+            font-size: 1.3rem;
+            color:rgb(255, 255, 255)  ;
+            
+            text-align: center;
+            
+        }
+        .upfilm{
+            display: flex;
+            flex-direction: row;
+            height: 400px;
+            margin: 10px;
+        }
+        .upfilm1{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://cdn.vox-cdn.com/thumbor/g3kQHbQgw7dvPOY3izDN8rMPgQc=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/23669451/solo_lvling.jpg ');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 1s;
+        }
+        
+        
+        
+        .upfilm2{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://m.media-amazon.com/images/M/MV5BNDFjYTIxMjctYTQ2ZC00OGQ4LWE3OGYtNDdiMzNiNDZlMDAwXkEyXkFqcGdeQXVyNzI3NjY3NjQ@._V1_.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 1s;
+        }
+        .upfilm3{
+            border-radius: 10px;
+            margin: 13px 54px 13px 3px;
+            width: 250px;
+            background-image: url('https://pics.filmaffinity.com/Suicide_Squad_ISEKAI_TV_Series-838589197-large.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 1s;
+        }
+       
+        .upfilm1:hover{
+            cursor: pointer;
+            opacity: 0.8;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px rgb(255, 255, 255);
+        }
+        .upfilm2:hover{
+            cursor: pointer;
+            opacity: 0.8;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px rgb(255, 255, 255);
+        }
+        .upfilm3:hover{
+            cursor: pointer;
+            opacity: 0.8;
+            transform: scale(1.05);
+            box-shadow: 0 0 29px rgb(255, 255, 255)
+        }
+        .upfilm img{
+            border-radius: 10px;
+            margin: 0px;
+            width: 250px;
+            height:380px ;
+        }
+        
+        hr{
+            color: #000000;
+        }
+        
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 490px;
+        }
+        .container p{
+            text-shadow: 0 0 29px rgb(255, 255, 255);
+            padding: 0px;
+            margin-top: 280px;
+            margin-left: 20px;
+            font-size:2.4rem ;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .but3 button{
+            padding: 5px;
+            margin-left:50px ;
+            margin-top: 20px;
+            border-radius: 20px;
+            color:rgb(137, 15, 15) ;
+            background-color: rgb(255, 255, 255);
+            opacity: 0.9;
+            border: none;
+            width: 200px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+            font-size: 14px;
+            transition: all 1.3s;
+        }
+        .but3 button:hover{
+            cursor: pointer;
+            color:goldenrod;
+            background-color: rgb(0, 0, 0);
+            opacity: 0.8;
+            transform:scale(1.1);
+        }
+        .formatsection{
+            margin-top: 0px;
+            border: 2px solid black;
+            height: 530px;
+            background-image: url('https://pbs.twimg.com/ext_tw_video_thumb/1698369823992844288/pu/img/lVQiMx8Sey7v0rLD.jpg:large');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .formatheading{
+            color:rgb(255, 255, 255);
+            flex-direction: row;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            font-size: large;
+        }
+        .yourname{
+            border-radius: 10px;
+            margin: 40px auto;
+            width: 300px;
+            height: 400px;
+            display: flex;
+            
+            background-image: url('https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg' );
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: cover;
+        }
+        .yotext{
+            margin-top: 29px;
+            margin-bottom: 10px;
+            margin-left: 17px ;
+            font-size: 20px;
+            display: flex;
+            align-items: right;
+            justify-content: right;
+            width: 550px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        .spotlight{
+            height: 550px;
+            width: 1515px;
+            border: 2px solid black;
+            background-image: url('https://pbs.twimg.com/ext_tw_video_thumb/1698369823992844288/pu/img/lVQiMx8Sey7v0rLD.jpg:large');
+            filter: brightness(100%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .oshi{
+            display: flex;
+            flex-direction: row;
+            height: 400px;
+            margin: 10px;
+        }
+        .oshi1 {
+    border-radius: 10px;
+    margin: 13px 54px 13px 3px;
+    width: 525px;
+    height: 300px;
+    background-image: url('https://cdn.fandomwire.com/wp-content/uploads/2023/10/17034714/Kenjiro-Tsuda-Hints-at-Nanami-Kentos-Inevitable-Fate-in-Jujutsu-Kaisen-with-Heartfelt-Message.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 1s;
+}
+        .spotheading{
+            margin-top: 77px;
+            margin-left: 25px;
+            width: 500px;
+        }
+        .spotpara{
+            margin-top: 2px;
+            margin-bottom: 100px;
+            margin-left: 140px ;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            width: 700px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: left;
+            color: rgb(255, 255, 255);
+        }
+        .spotheading{
+            color:rgb(255, 255, 255);
+            font-size: 19px;
+        }
+        .sus{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          
+            width: 650px;
+        }
+        
+        
+        .foot{
+            height: 250px;
+            width: 1515px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px auto;
+            color: rgb(0, 0, 0);
+            background-image: url('https://www.pixelstalk.net/wp-content/uploads/images5/4K-Neon-City-Wallpaper-Desktop-768x432.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            
+        }
+        .foot h2{
+            margin-right: 380px;
+            font-size:2rem ;
+            color:rgb(250, 250, 250)
+        }
+        input[type=submit]{
+            cursor: pointer;
+            color:rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+            transform:scale(1.1);
+            margin: 13px;
+            border: none;
+            border-radius: 30px;
+            width: 100px;
+            padding: 5px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+        input[type=reset]{
+            cursor: pointer;
+            color:rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+            transform:scale(1.1);
+            margin: 13px;
+            border: none;
+            border-radius: 30px;
+            width: 100px;
+            padding: 5px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+        input[type= 'reset']:hover{
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            transition: all 2s;
+            
+        }
+        input[type= 'submit']:hover{
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            transition: all 2s;
+        }
+        .foot form{
+            margin-right: 140px;
+            padding: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: large;
+        }
+        input{
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            transition: all 2s;
+            border: NONE;
+        }
+           
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Manga</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">News</a></li>
+                <div class="search">
+                    <input type="text" name="Search" placeholder="Search ">
+                </div>
+            </li>
+            </ul>
+        </div>
+    </header>
+    <div class="home">
+        <div class="homeheading">
+        
+          
+        </div>
+        <div class="homepara">
+            <p style="margin: 110px 0;">Upgrade Your Anime Experience with Premium</p>
+        </div>
+        <div class="but">
+            <div class="but1">
+                <button type="button">Sign Up</button>
+            </div>
+            <div class="but2">
+                <button type="button">Login</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="now">
+        <div class="nowheading">
+            <h1>October 2023 Simulcasts 🧸</h1>
+        </div>
+        <div class="film">
+            <div class="film1">
+            </div>
+            <div class="film2">
+            </div>
+            <div class="film3">
+            </div>
+            <div class="film4">
+            </div>
+        </div>
+        <div class="filmnames">
+            <ul>
+                <li><a href="#">Jujutsu Kaisen</a></li>
+                <li><a href="#">Suzume</a></li>
+                <li><a href="#">Chainsaw Man</a></li>
+                <li><a href="#">Horimiya</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <hr>
+    <div class="upcoming">
+        <div class="upheading">
+            <h1> Coming Soon 🍿</h1>
+        </div>
+        <div class="upfilm">
+            <div class="upfilm1"><a target="_blank" href="https://youtu.be/eqy85AL70PU?si=nKy2m7sT_ZgdQXr8"><img src="https://cdn.vox-cdn.com/thumbor/g3kQHbQgw7dvPOY3izDN8rMPgQc=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/23669451/solo_lvling.jpg" alt=""></a></div>
+            <div class="upfilm2"><a target="_blank" href="https://youtu.be/fRph5rtFiRQ?si=b9ZuvTVXddXBIeFs"><img src="https://m.media-amazon.com/images/M/MV5BNDFjYTIxMjctYTQ2ZC00OGQ4LWE3OGYtNDdiMzNiNDZlMDAwXkEyXkFqcGdeQXVyNzI3NjY3NjQ@._V1_.jpg" alt=""></a></div>
+            <div class="upfilm3"><a target="_blank" href="https://youtu.be/XSaBR58f7I0?si=LLcwQLikrMLdwe0W"><img src="https://pics.filmaffinity.com/Suicide_Squad_ISEKAI_TV_Series-838589197-large.jpg" alt=""></a></div>
+        </div>
+    </div>
+    <hr>
+    <div class="formatsection">
+        <div class="formatheading">
+            <h1>Critically-acclaimed  </h1>
+        </div>
+        <div class="yourname"></div>
+            <div class="yotext">
+               
+            </div>
+            
+        </div>
+        <hr>
+        <div class="spotlight">
+            <div class="spotheading">
+                <h1>Artists We Love</h1>
+                <p>Crunchyroll のお気に入りの声優</p>
+            </div>
+            <div class="oshi">
+            <div class="oshi1"></div>
+            <div class="spotpara">
+                <h >Kenjiro Tsuda’s voice is widely regarded as the most distinct in the Japanese industry and also the most well-known male anime voice actors. Tsuda began his career as a voice actor in 1995 and has since been involved in stage acting, narration, film acting, and even directing.
+<br>
+<br>
+                    He has voiced a number of notable characters throughout his career, including Overhaul from My Hero Academia, Nanami Kento from Jujutsu Kaisen, Tatsu from The Way of the Househusband, and The Beholder from To Your Eternity. Tsuda won the 15th Seiyu Awards in the category of “Best Lead Actor”.</h>
+            </div>
+            
+        </div>   
+    
+    <hr>
+    <div class="foot">
+        
+        <div>
+            <h2>Connect With Us</h2>
+        </div>
+        <action="backend.php">
+            <div>
+                <p style="color:white">    Email: <input type="email" name="myEmail"></p>
+            </div>
+    
+            <br>
+            <div>
+                <p style="color:white">   DOB: <input type="date" name="myDate"></p>
+            </div>
+            <br>
+            <div>
+                <p style="color:white">  Contact number: <input type="number" name="myBonus"></p>
+            </div>
+            <br>
+            <div>
+                <p style="color:white">  Gender: Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender">
+                Other <input type="radio" name="myGender"></p>
+            </div>
+    
+            <br>
+            <div>
+                <input type="submit" value="Submit Now">
+                <input type="reset" value="Reset Now">
+            </div>
+        
+        </form>
+    </div>
+</body>
+</html>
+               
+        
+
+
